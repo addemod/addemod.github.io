@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmox_docs=self.webpackChunkmox_docs||[]).push([[5996],{4398:e=>{e.exports=JSON.parse('{"title":"Frontend","description":"Allt frontend-relaterat! \ud83d\ude80","slug":"/category/frontend","permalink":"/docs/category/frontend","navigation":{"next":{"title":"SCSS-struktur och teman","permalink":"/docs/frontend/themes"}}}')}}]);
