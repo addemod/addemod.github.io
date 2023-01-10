@@ -11,22 +11,26 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    working-directory: ./mox-docs
     steps:
       - uses: actions/checkout@v3
+        working-directory: ./mox-docs
       - uses: actions/setup-node@v3
+        working-directory: ./mox-docs
         with:
           node-version: 18
           cache: yarn
 
       - name: Install dependencies
+        working-directory: ./mox-docs
         run: yarn install --frozen-lockfile
       - name: Build website
+        working-directory: ./mox-docs
         run: yarn build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
+        working-directory: ./mox-docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
